@@ -11,7 +11,9 @@ import NavBar from './components/NavBar.vue';
 <template>
 
     <NavBar />
-    <h1>Weather for Lodi Italy</h1>
+    
+    <router-view></router-view>
+    
     
 
 </template>
