@@ -12,10 +12,10 @@
           },
           weeklyWeather: [
             { dayOfWeek: 'Monday', icon:'fa-solid fa-cloud', minTemp: 6, maxTemp: 16 },
-            { dayOfWeek: 'Tuesday', icon: 'fa-solid fa-bolt', minTemp: 6, maxTemp: 16 },
-            { dayOfWeek: 'Wednesday', icon: 'fa-solid fa-sun', minTemp: 6, maxTemp: 16 },
-            { dayOfWeek: 'Thursday', icon: 'fa-solid fa-wind', minTemp: 6, maxTemp: 16 },
-            { dayOfWeek: 'Friday', icon: 'fa-solid fa-cloud-bolt', minTemp: 6, maxTemp: 16 },
+            { dayOfWeek: 'Tuesday', icon: 'fa-solid fa-bolt', minTemp: 5, maxTemp: 18 },
+            { dayOfWeek: 'Wednesday', icon: 'fa-solid fa-sun', minTemp: 4, maxTemp: 23 },
+            { dayOfWeek: 'Thursday', icon: 'fa-solid fa-wind', minTemp: 8, maxTemp: 13 },
+            { dayOfWeek: 'Friday', icon: 'fa-solid fa-cloud-bolt', minTemp: 6, maxTemp: 15 },
             { dayOfWeek: 'Saturday', icon: 'fa-solid fa-sun', minTemp: 6, maxTemp: 16 },
             { dayOfWeek: 'Sunday', icon: 'fa-solid fa-tornado', minTemp: 6, maxTemp: 16 },
 
@@ -40,7 +40,7 @@
       <div class="weekly-forecast">
         <div class="container-fluid ">
         <div class="row d-flex justify-content-between">
-          <div v-for="day in weeklyWeather" :key="day.dayOfWeek" class="col-12 col-lg-4 col-xl-1 day">
+          <div v-for="day in weeklyWeather" :key="day.dayOfWeek" class="col-12 col-lg-4 col-xl-1 mt-4 day">
             <h3>{{ day.dayOfWeek }}</h3>
             <i class="weekly-forecast-icon" :class="day.icon"></i> 
             <p>{{ day.minTemp }}°C - {{ day.maxTemp }}°C</p>
@@ -120,7 +120,16 @@
 .day {
   text-align: center;
   //border-right: 1px solid rgb(86, 85, 85);
-  
+}
+
+@media (max-width: 1200px){
+  .day{
+    background-color:rgb(199, 205, 205);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.2rem;
+    border-radius: 1rem;
+  }
 }
 
 </style>

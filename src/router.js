@@ -3,16 +3,12 @@ import { createRouter, createWebHistory } from "vue-router";
 // Importare le pagine
 import Dashboard from './pages/Dashboard.vue';
 import Settings from './pages/Settings.vue';
-import Home from './pages/Home.vue';
+
 
 
 // definiamo le rotte
 const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: Home,
-  },
+ 
 
   {
     path: "/dashboard", 
